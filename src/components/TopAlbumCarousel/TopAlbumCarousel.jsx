@@ -1,8 +1,22 @@
-import React from 'react'
-import TopAlbumCard from '../TopAlbumCard/TopAlbumCard'
-import style from './TopAlbumCarousel.module.css'
+import { React, useState, useEffect } from 'react';
+import Card from '../Card/Card';
+import style from './TopAlbumCarousel.module.css';
+import { fetchTopAlbum } from '../../api/api';
 
 const TopAlbumCarousel = () => {
+    const [topAlbum, setTopAlbum] = useState([]);
+
+    const getTopAlbums = async () => {
+        try {
+            const topAlbumData = await fetchTopAlbum();
+            setTopAlbum(topAlbumData.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    useEffect(() => {
+        getTopAlbums();
+    }, []);
     return (
         <>
             <div className={style.carouselContainer}>
@@ -11,11 +25,13 @@ const TopAlbumCarousel = () => {
                     <h3 className={style.carouselCollapse}>Show all</h3>
                 </div>
                 <div className={style.carouselItem}>
-                    <TopAlbumCard />
+                    {topAlbum.map((item) => {
+                        return <Card key={item.id} data={item} type="albums" />;
+                    })}
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default TopAlbumCarousel
+export default TopAlbumCarousel;
