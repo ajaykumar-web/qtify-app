@@ -1,0 +1,31 @@
+.carouselItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.carouselContainer {
+    padding: 0 2.69rem;
+}
+
+.carouselHeading {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.carouselCollapse {
+    color: var(--color-green);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.carouselItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
