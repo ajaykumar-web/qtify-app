@@ -1,0 +1,29 @@
+.sectionContainer {
+    width: 100%;
+    margin: 0 0 1.5625rem;
+    padding: 0 1rem;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cardContainer {
+    margin: 0.625rem 0 0;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: 1.5625rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggleLink {
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--color-green);
+}

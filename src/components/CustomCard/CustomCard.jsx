@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Card.module.css';
+import styles from './CustomCard.module.css';
 import Tooltip from '@mui/material/Tooltip';
 
-const Card = ({ data, type }) => {
+const CustomCard = ({ data, type }) => {
     const getCard = (type) => {
         switch (type) {
-            case 'albums': {
+            case 'album': {
                 const { image, follows, title, songs } = data;
                 return (
                     <Tooltip title={`${songs.length} songs`} placement="top">
@@ -34,4 +34,4 @@ const Card = ({ data, type }) => {
     return getCard(type);
 };
 
-export default Card;
+export default CustomCard;
