@@ -4,6 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import CarouselSection from './components/CarouselSection/CarouselSection';
 import SongsTabs from './components/SongsTabs/SongsTabs';
+import FAQs from './components/FAQs/FAQs';
+import PlaySong from './components/PlaySong/PlaySong';
 import { fetchTopAlbum } from './api/api';
 import { fetchSongs } from './api/api';
 
@@ -39,6 +41,7 @@ function App() {
             <CarouselSection data={topAlbum} type="album" title="Top Albums" />
             <CarouselSection data={topAlbum} type="album" title="New Albums" />
             <SongsTabs data={songs} type="songs" title="Songs" />
+            <FAQs />
         </>
     );
 }
