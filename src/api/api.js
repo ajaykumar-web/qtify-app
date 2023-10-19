@@ -10,3 +10,12 @@ export const fetchTopAlbum = async () => {
         console.error(e);
     }
 };
+
+export const fetchSongs = async () => {
+    try {
+        const response = await axios.get(`${BACKEND_ENPOINT}/songs`);
+        return response;
+    } catch (e) {
+        console.error(e);
+    }
+};

@@ -27,6 +27,26 @@ const CustomCard = ({ data, type }) => {
                     </Tooltip>
                 );
             }
+            case 'songs': {
+                const { image, likes, title } = data;
+                return (
+                    <div className={styles.albumCard}>
+                        <div className={styles.albumCard}>
+                            <img
+                                className={styles.genreImage}
+                                src={image}
+                                alt={title}
+                            />
+                            <div className={styles.followerContainer}>
+                                <button className={styles.btn}>
+                                    {likes} Likes
+                                </button>
+                            </div>
+                        </div>
+                        <p className={styles.cardTitle}>{title}</p>
+                    </div>
+                );
+            }
             default:
                 return <></>;
         }

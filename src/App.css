@@ -30,3 +30,16 @@ body {
 body {
     background-color: var(--color-black);
 }
+
+.MuiTab-root {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.MuiTabs-indicator {
+    background-color: var(--color-green) !important;
+}
+
+.MuiTab-textColorPrimary.Mui-selected {
+    color: var(--color-green) !important;
+}

@@ -5,6 +5,7 @@ import Carousel from '../Carousel/Carousel';
 import { CircularProgress } from '@mui/material';
 
 const Section = ({ title, data, type }) => {
+    console.log(title);
     const [toggle, setToggle] = useState(true);
     const handleToggle = () => {
         setToggle(!toggle);
@@ -12,12 +13,16 @@ const Section = ({ title, data, type }) => {
 
     return (
         <div className={style.sectionContainer}>
-            <div className={style.pageHeader}>
-                <h3 className={style.toggleLink}>{title}</h3>
-                <h3 className={style.toggleLink} onClick={handleToggle}>
-                    {toggle ? 'Collapse' : 'Show all '}
-                </h3>
-            </div>
+            {type !== 'songs' ? (
+                <div className={style.pageHeader}>
+                    <h3 className={style.sectionLabel}>{title}</h3>
+                    <h3 className={style.toggleLink} onClick={handleToggle}>
+                        {toggle ? 'Collapse' : 'Show all '}
+                    </h3>
+                </div>
+            ) : (
+                <>{null}</>
+            )}
             {data?.length ? (
                 <div className={style.cardContainer}>
                     {!toggle ? (

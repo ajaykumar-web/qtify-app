@@ -1,0 +1,6 @@
+.sectionLabel {
+    margin-right: 0.625rem;
+    cursor: pointer;
+    color: var(--color-white);
+    padding: 0 1rem;
+}
