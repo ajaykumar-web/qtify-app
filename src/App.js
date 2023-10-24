@@ -36,7 +36,7 @@ function App() {
     }, []);
     return (
         <>
-            <Navbar />
+            <Navbar data={topAlbum} />
             <HeroSection />
             <CarouselSection data={topAlbum} type="album" title="Top Albums" />
             <CarouselSection data={topAlbum} type="album" title="New Albums" />
