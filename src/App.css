@@ -50,4 +50,5 @@ body {
 
 .MuiCircularProgress-root {
     margin: auto !important;
+    display: block !important;
 }
