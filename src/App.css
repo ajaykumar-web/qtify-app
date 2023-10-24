@@ -43,3 +43,11 @@ body {
 .MuiTab-textColorPrimary.Mui-selected {
     color: var(--color-green) !important;
 }
+
+.MuiInputBase-root {
+    height: 3rem !important;
+}
+
+.MuiCircularProgress-root {
+    margin: auto !important;
+}
